@@ -1,0 +1,254 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Samsung" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_str_serialNumber" Type="InArgument(x:String)" />
+    <x:Property Name="out_str_precioSamsung" Type="OutArgument(x:String)" />
+    <x:Property Name="out_bool_precioSamsung" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="in_str_urlSamsung" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>774,1646</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Samsung_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Samsung" sap:VirtualizedContainerService.HintSize="550,1581" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="488,1378" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="450,1110" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c9c88915-f892-4b5e-a0f3-b6a911c215ca" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,893" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="354,127" sap2010:WorkflowViewState.IdRef="Activate_1">
+                  <ui:Activate.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="43fab33e-22c4-4484-b7a5-a5a28d98b046" Selector="&lt;html app='chrome.exe' url='https://www.samsung.com/es/*' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Activate.Target>
+                </ui:Activate>
+                <uix:NClick ClickType="Single" DisplayName="Click Lupa Buscar" sap:VirtualizedContainerService.HintSize="354,197" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c9c88915-f892-4b5e-a0f3-b6a911c215ca" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://www.samsung.com/es/" DesignTimeRectangle="1287, 175, 24, 24" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl tag='svg' class='icon' idx='52' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='svg' class='icon' type='' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;' /&gt;" Guid="8a92c635-ecaa-4493-9a53-060f005a82a6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKCSURBVEhL7ZU/SGphGIcVtEESazBUFNJQJEl0cRFxs8Gh0VkEl2gPEUcRpKGtsUVwcwppSFFoaPDf0iRGCiIighRoRLzxvr167+Gcoye43eFyH/gQf+f8vkfO+b5PFfxl/guh1WpBKpWCYDAIRqMRdDod+Hw+SCaTcHNzAx8fH3ynMmSF/X4fjo+PQaVSrR0HBwdQrVa5tRlJ4ePjI5jNZprQYDBAJpOBcrlMP2I2m0G9XofLy0twOp10j0ajgVKpxO31iITPz89gMploomg0CqPRiK+IeXt7g/Pz85W0UqnwFXlEwnA4TBPgp1LS6TR19vb24PX1lVNpBMLb21sq6vV6GA6HnG7m/f2dFhJ2c7kcp9IIhPF4nErZbJYT5eA7xq7f7+dEGoEQVxyW2u02J8pZLBawtbVFfVxYcgiEOzs7VJhOp5x8j8PDQ+p3Oh1OxAiE+O6wsOnFyxEKhaj/8PDAiRiBcLmvut0uJ9/D4XBQX/EjjcViVLi6uuJEOXgoYNdisXAijUBYLBapdHR0xIlyzs7OqIsHwToEQtxPLpeLihcXF5xu5v7+HrRaLR3uLy8vnEojECJ3d3ckVKvVUCgUOJWn2WzC7u4udfL5PKfyiIQIHtY4AY5EIiG5L/HMxSNtubJxWK1WeHp64jukkRQi19fXsL29vZrM4/HQ+YojEAiscty7+Pi9Xi99t9lsa6WyQgRX3snJCf0TLAU48HHjFjg9PYXJZEL34icutqUUu1KsFS7BhVCr1eiPttFowHw+5ytCUIpPAqV2ux0GgwFf+YUi4XcYj8fgdrtJur+/L5L+cSHyuzQSiXD6xY8IEZTi2drr9Tj54seEcvzrQoBPVP3WOONHbPIAAAAASUVORK5CYII=" InformativeScreenshot="eacda6e48aede20f2eedf1da70a21ce0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.samsung.com*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NClick>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into SerialNumber" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,258" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c9c88915-f892-4b5e-a0f3-b6a911c215ca" Text="[in_str_serialNumber &amp; &quot;[k(enter)]&quot;]" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://www.samsung.com/es/" DesignTimeRectangle="450, 333, 572, 48" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT gnb-search-keyword'" FullSelectorArgument="&lt;webctrl id='gnb-search-keyword' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='gnb-search-keyword' tag='INPUT' type='text' class='gnb-search__input' aaname='Search Keyword' /&gt;" Guid="3512b287-5f3a-469a-9e44-ef629d5ee031" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAkAAAAA0CAYAAABitofIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAU0SURBVHhe7d29khM5FAbQeQxelJAMMlIyQjJCQkLegCoCQt6AjNDLN/TtkoXksYFZsHVOlRarf9RqObhfWezu3ZMnTw6apmmapmkrNQFI0zRN07Tl2t0BAGAxd9/lH1sXAOB2Ve4RgACAZewBaOsDACxDAAIAlmMLDABYxr4FJgABAKvYA9DWBwBYhgAEACzHFhgAsIx9C0wAAgBWsQegrQ8AsAwBCABYji0wAGAZ+xaYAAQArGIPQFsfAGAZjx6APn78eHj16tXh27dv2xEuZQ0B4M+aboG9efPm8PTp06P29u3bi4vwv1i8379//9O7vX79+vD169ftisPhy5cvh2fPnh1dk/tm8n55z1yXdz4l51+8eHH0vFLjtGPM1jDfURoAcJ59C6wPQFX4+wL9q0HmV+97LAkMeb+8Z8kc22PpJ8i04aLWZRaCaoznz5/ffz4l5wUgAPj/7QFo699LQU5h/pNFdVa8/4aEmASUNvxcYhZcKrS8e/fup/AyMhsnBCAAeHxHAehUYR4ZbSX1xX9UvCtotff119TY/Xgp+Ln306dP019kcs0oMDxWAMoc8rwcz5/9nHuzceKcAJR+u3bVai3q+s+fP9+vUXuu1rVt7bMAYAVHW2CX/qKQIPHhw4et96O4tltJ0Rfvkl9LKgBUIOqfnfHaoJCx2vFHQafGGhX13DcLTefIfaeeNwovIzn/OwGozL6vXJ9gM7rnnO8MAG7VvgVWH6rw/mo4iNEYs+LdG4WCChcZbzZ2f8/oWCv3JxycumakwlPGb7UhrObYX9M7NcfRGPk8WsNTAejc9xutKwDcqj0Abf1pIUwxvWS7pC/Ks+LdS8AYbU/l/gSP/Fta/Tgp8Cn07ZxmoaBVYabe6aGwUM/px+3nXGv40Brl/L8SgOKcNQOAW/JgACqjsBHptwEprS2ms+Jdz2vvm23FZLyc758dmW89bzbHUyoMzZ4dGf+cAFLv9NDzc/5vBqCcb9c9bTQOANyqfQssZgU1+nDRBpi2WPdjjIp3FeD2eP9rSpk9p+T6ly9f3s8v508V/pl6xujdE7BGY+ZZfWiqcUbzbJ2a52iMfG7Xqsy+r9n4s7WcjQMAt2bfAmsD0KnCnGM5V4Vzdm1fTHNdW7yrCPe/NM0CUD0n/xHGU0U91/1OIR/dmzFnvwxl/gkSszZbx5itXfTrHPn8JwLQ7PhsHAC4NXsA2vr3qviOimFfmM8tpn3xviQAtc+c3Rc5Vn9HqOZ3idHYmUfCzyXj1TgP3VPvNXqX3Nuva45l3FrDMgsuozFidnw2DgDcqqMAFFX4+0JZRbuKe13XFvEU0fz60RbTUdHN+fZYjdX/2pLr2sKfsfprYjbnXu7P/No5V2hp7613HQWUU84NQDGaSz73x2K0hjFbj9n1tU7t+KPvDABu3dEWWKsKY9v6IllFvFoKa65pr6tQ0N7fHktLsc5Y7S9AGWtU3DNGf7zG6+c30s85LfdmjFJBob8ubTSnckkAiv45s7FHa1gqNKVVsJkFoDjnOwOAW7Vvgc0C0DVJaBj9/SEAgNYegLb+1artKr9gAADnutoAVMEn2zjCDwBwiaveAmv/f2IAAA/Zt8CuOQABAFxiD0BbHwBgGQIQALAcW2AAwDL2LTABCABYxR6Atj4AwDIEIABgObbAAIBl7FtgAhAAsIo9AG19AIBlCEAAwHJsgQEAy9i3wAQgAGAVewDa+gAAyzj6Baj9HPr6+vpFX19fv1xzvz5/bz8fLPr6+vpFX19fv1xz/8fnu8N/6k6jCoAWKswAAAAASUVORK5CYII=" InformativeScreenshot="abf0fd1b437d70c005b7e71fa4d2b8dd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.samsung.com*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                  </uix:NTypeInto.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NTypeInto>
+                <ui:UiElementExists DisplayName="Element Exists 'PrecioSamsung'" Exists="[out_bool_precioSamsung]" sap:VirtualizedContainerService.HintSize="354,147" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                  <ui:UiElementExists.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ff8ac50e-e76f-4f39-a858-68b56b64b92d" InformativeScreenshot="c94c2e5caf7495ce4ec5ec48fc235868" Selector="&lt;webctrl class='result-price__money' parentid='product' tag='SPAN' /&gt;" TimeoutMS="5000">
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:UiElementExists.Target>
+                </ui:UiElementExists>
+                <If Condition="[out_bool_precioSamsung]" DisplayName="If precioSamsung" sap:VirtualizedContainerService.HintSize="354,77" sap2010:WorkflowViewState.IdRef="If_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If.Then>
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,265" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NGetText DisplayName="Get Text PrecioSamsung" sap:VirtualizedContainerService.HintSize="354,180" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="c9c88915-f892-4b5e-a0f3-b6a911c215ca" TextString="[out_str_precioSamsung]" Version="V3">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.samsung.com/es/ai-search/?searchvalue=SM-S928BZKPEUE" DesignTimeRectangle="606, 486, 81, 23" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'1.459,00 €'" FullSelectorArgument="&lt;webctrl class='result-price__money' parentid='product' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='result-price__money' parentid='product' tag='SPAN' type='' /&gt;" Guid="193b3a4a-8546-45b3-a820-9857ef455daf" ImageBase64="" InformativeScreenshot="ccad80778766f9e8f94dad1ccbadee46.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='usi_id=apvmbk_1716291313=1719742919282;' title='AI-Search | Samsung ES' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="8, 175, 1423, 111" ElementType="InputBox" FriendlyName="'Formulario de'" FullSelectorArgument="&lt;webctrl class='query-input__wrap' parentid='QueryInput' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='query-input__wrap' parentid='QueryInput' tag='DIV' type='' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                      </uix:NGetText>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,100" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </If.Else>
+                </If>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="-8, -8, 1456, 876" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="a78dab1118051d801f9741c78a502680.png" Selector="&lt;html app='chrome.exe' url='https://www.samsung.com/es/*' /&gt;" Url="[in_str_urlSamsung]" />
+          </uix:NApplicationCard.TargetApp>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uix:NApplicationCard>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Throw Exception="[new BusinessRuleException(&quot;SL-02&quot;)]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,115" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;FIN modulo Samsung&quot;]" />
+  </Sequence>
+</Activity>
